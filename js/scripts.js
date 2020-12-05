@@ -1,9 +1,8 @@
 
 /* Night mode */
-function checkCookie() {
-    console.log('Cookies are now: ' + document.cookie);
+function checkMode() {
 
-    if (document.cookie === 'mode=night') {
+    if (localStorage.getItem("mode") == 'night') {
         switchMode();
     }
 }
@@ -27,7 +26,8 @@ function switchMode() {
 
     if (bodyClass == 'night-mode') {
 
-        document.cookie = "mode=day; expires=Tue, 19 Jan 2038 03:14:07 GMT";
+        // Store the mode
+        localStorage.setItem("mode", "day");
 
        // Change body class
        document.body.setAttribute('class','');
@@ -47,9 +47,10 @@ function switchMode() {
        dayImage.classList.remove('inactive');
        nightImage.classList.add('inactive');
        
-   } else if (bodyClass == '' || document.cookie == 'mode=night') {
+   } else if (bodyClass == '' || localStorage.getItem("mode") == 'night') {
 
-        document.cookie = "mode=night; expires=Tue, 19 Jan 2038 03:14:07 GMT";
+        localStorage.setItem("mode", "night");
+
         // Change body class
         document.body.setAttribute('class', 'night-mode');
 
@@ -71,10 +72,10 @@ function switchMode() {
 }
 
 (function() {
-    checkCookie();
+    checkMode();
 })();
 
-document.getElementById('night-mode-btn').addEventListener('click', event => {
+document.getElementById('night-mode-btn').addEventListener('click', () => {
 
    switchMode();
 });
