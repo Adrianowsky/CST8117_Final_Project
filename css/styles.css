@@ -64,6 +64,10 @@ h1, h2, h3, h4, h5, h6 {
 */
 
 /* Navbar */
+#home-page header {
+    height: 100vh;
+}
+
 #navbar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -150,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 #header-img,
 #night-header-img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 header h1 {
