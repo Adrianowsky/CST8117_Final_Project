@@ -1,0 +1,66 @@
+/* about us banner css */
+
+.about-us-bnr  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    background-color: #020301;
+}
+
+.about-us-bnr__txt {
+    margin: 0.5rem 2rem;
+    color: #ACC888; 
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    text-align: center;
+}
+
+.night-mode > .about-us-bnr__txt {
+    margin: 0.5rem 2rem;
+    color: #A0D176; 
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    text-align: center;
+}
+
+a.about-us-bnr__btn {
+    color: #020301;
+    background-color: #A0D176;
+    border-color: #A0D176;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 1.2vmin 2.5vmin;
+    font-size: 1.35rem;
+    margin: 0.5rem 2rem;
+}
+
+a.about-us-bnr__btn:hover {
+    color: #A0D176;
+    background-color: #202B10;
+    border: 0.5px solid #A0D176;
+}
+
+.footer-bnr  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    background-color: #020301;
+}
+
+a.footer-bnr__btn, h3.footer-bnr__txt {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color:  #202B10;
+    text-shadow: 0.5px 0.5px 2px #A0D176;
+}
