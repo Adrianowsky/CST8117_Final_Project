@@ -20,10 +20,6 @@ function switchMode() {
     let nightAudio = document.getElementById("nighttime-audio"); 
     let dayAudio = document.getElementById("daytime-audio"); 
 
-    // Get header images
-    let dayImage = document.getElementById("header-img"); 
-    let nightImage = document.getElementById("night-header-img"); 
-
     if (bodyClass == 'night-mode') {
 
         // Store the mode
@@ -42,10 +38,6 @@ function switchMode() {
            nightAudio.pause();
            dayAudio.play();
        }
-
-       // Change images
-       dayImage.classList.remove('inactive');
-       nightImage.classList.add('inactive');
        
    } else if (bodyClass == '' || localStorage.getItem("mode") == 'night') {
 
@@ -64,10 +56,6 @@ function switchMode() {
             dayAudio.pause();
             nightAudio.play();
         }
-
-        // Change images
-       dayImage.classList.add('inactive');
-       nightImage.classList.remove('inactive');
     }
 }
 
@@ -150,23 +138,3 @@ document.getElementById('audio-btn').addEventListener('click', event => {
     }
 });
 /* END Audio system */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
