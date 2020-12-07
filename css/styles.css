@@ -64,10 +64,6 @@ h1, h2, h3, h4, h5, h6 {
 */
 
 /* Navbar */
-#home-page header {
-    height: 100vh;
-}
-
 #navbar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -154,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 #header-img,
 #night-header-img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 header h1 {
@@ -165,6 +161,12 @@ header h1 {
     font-size: 50px;
     text-align: center;
     color: white;
+}
+
+#reg-header {
+    width: 100%;
+    height: 60vh;
+    margin-bottom: -7px;
 }
 
 @media (max-width: 850px) {
@@ -186,3 +188,26 @@ header h1 {
 /*
     ----------------- END HEADER ------------------------
 */
+
+/* 
+    ------------------CAFE TABLE------------------------- 
+*/
+
+#brick {
+    width: 100%;
+    height: 100%;
+} 
+
+/*
+-----------------------GALLERY----------------------------
+*/
+
+#gallery {
+    background-color: #febe00;
+}
+
+#upload {
+    border: 3px solid black;
+    padding: 5em;
+    text-align: center;
+}
