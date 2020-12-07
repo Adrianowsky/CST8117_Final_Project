@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 */
 
 /* Navbar */
+<<<<<<< HEAD
 header {
     display: flex;
 }
@@ -71,6 +72,8 @@ header {
     height: 100vh;
 }
 
+=======
+>>>>>>> 0a348dfcc0cabbe79d6b7e192514f6c2f52eb3fe
 #navbar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -158,8 +161,10 @@ header {
 
 #header-img {
     width: 100%;
+<<<<<<< HEAD
     height: 100%;
     transition: all 1s;
+>>>>>>> 0a348dfcc0cabbe79d6b7e192514f6c2f52eb3fe
 }
 
 .night-mode #header-img {
@@ -176,6 +181,12 @@ header h1 {
     font-size: 50px;
     text-align: center;
     color: white;
+}
+
+#reg-header {
+    width: 100%;
+    height: 60vh;
+    margin-bottom: -7px;
 }
 
 @media (max-width: 850px) {
@@ -197,6 +208,7 @@ header h1 {
     ----------------- END HEADER ------------------------
 */
 
+<<<<<<< HEAD
 
 /*
     ----------------- ANIMALS PAGE ------------------------
@@ -272,3 +284,27 @@ header h1 {
 /*
     ----------------- END ANIMALS PAGE ------------------------
 */
+=======
+/* 
+    ------------------CAFE TABLE------------------------- 
+*/
+
+#brick {
+    width: 100%;
+    height: 100%;
+} 
+
+/*
+-----------------------GALLERY----------------------------
+*/
+
+#gallery {
+    background-color: #febe00;
+}
+
+#upload {
+    border: 3px solid black;
+    padding: 5em;
+    text-align: center;
+}
+>>>>>>> 0a348dfcc0cabbe79d6b7e192514f6c2f52eb3fe
