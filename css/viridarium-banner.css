@@ -14,25 +14,31 @@
 
 .viridarium-banner-txt {
     margin: 0.5rem 2rem;
+    font-family: 'Montserrat Alternates', sans-serif;
     color: #ACC888; 
     font-size: 1.2rem;
+    font-weight: bold;
     line-height: 1.7rem;
     text-align: center;
 }
 
 .night-mode > .viridarium-banner-txt {
     margin: 0.5rem 2rem;
+    font-family: 'Montserrat Alternates', sans-serif;
     color: #A0D176; 
+    font-weight: bold;
     font-size: 1.2rem;
     line-height: 1.7rem;
     text-align: center;
 }
 
 a.viridarium-banner-btn {
+    font-family: 'Montserrat Alternates', sans-serif;
     color: #020301;
     background-color: #A0D176;
     border-color: #A0D176;
     font-size: 1.2em;
+    font-weight: bold;
     text-decoration: none;
     padding: 1.2vmin 2.5vmin;
     font-size: 1.35rem;
@@ -40,9 +46,12 @@ a.viridarium-banner-btn {
 }
 
 a.viridarium-banner-btn:hover {
+    font-family: 'Montserrat Alternates', sans-serif;
     color: #A0D176;
+    font-weight: bold;
     background-color: #202B10;
     border: 0.5px solid #A0D176;
+    padding: ;
 }
 
 
@@ -142,7 +151,7 @@ a.viridarium-banner-btn:hover {
     background-color: #020301;
 }
 
-a.footer-banner-btn, h3.footer-banner-txt, a.animal-banner-btn {
+a.footer-banner-btn, h3.footer-banner-txt {
     text-align: center;
     font-family: 'Proza Libre', sans-serif;
     font-size: 1.1em;
@@ -150,13 +159,18 @@ a.footer-banner-btn, h3.footer-banner-txt, a.animal-banner-btn {
     letter-spacing: 0.2em;
     color:  #202B10;
     text-shadow: 0.5px 0.5px 2.5px #A0D176;
+    padding: 15px;
 }
 
-a.footer-banner-btn:hover, a.animal-banner-btn:hover {
+a.footer-banner-btn {
+    border: none;  
+}
+
+a.footer-banner-btn:hover {
     color: #020301;
     background-color: #A0D176;
-    border-color: #A0D176;
+    border: none;
     text-decoration: none;
-    padding: 0.5vmin 0.5vmin;
-    margin: 0.5rem 0.5rem;
+    padding: 2px;
+    /* margin: 0.5rem 0.5rem; */
 }
