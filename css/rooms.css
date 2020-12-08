@@ -1,0 +1,435 @@
+/* viridarium banner css */
+
+.viridarium-banner  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    background-color: #020301;
+    z-index: 2;
+}
+
+.viridarium-banner-txt {
+    margin: 0.5rem 2rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #ACC888; 
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.7rem;
+    text-align: center;
+}
+
+.night-mode > .viridarium-banner-txt {
+    margin: 0.5rem 2rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #A0D176; 
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    text-align: center;
+}
+
+a.viridarium-banner-btn {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #020301;
+    background-color: #A0D176;
+    border-color: #A0D176;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1.5vmin;
+    margin: 0.5rem 2rem;
+}
+
+a.viridarium-banner-btn:hover {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #A0D176;
+    font-weight: bold;
+    background-color: #202B10;
+    border: 0.5px solid #A0D176;
+    padding: none;
+}
+
+@media screen and (max-width: 900px) {
+    a.viridarium-banner-btn, a.viridarium-banner-btn:hover {
+        text-decoration: underline;
+        color: #A0D176;
+        background: none;
+        border: none;
+        font-size: 1em;
+        font-weight: bold;
+        text-decoration: #202B10;
+        padding: none;
+        margin: 0;
+    }
+}
+
+/*---------- END viridarium banner CSS--------*/
+
+
+/*---------- flexbox CSS--------*/
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+}
+
+.rooms-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    opacity: 1;
+    clear: all;
+}
+
+.flex-item {
+    display: inline-flex;
+    width: 50vw;
+    height: 50vh;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.rooms-flex-item {
+    display: inline-flex;
+    width: 48vw;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    padding: 2em;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.flex-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1s ease-in 0.25s;
+    opacity: 1;
+}
+
+.flex-image.inviewport {
+    opacity: 1;
+}
+
+.flex-content {
+    flex: 0 1 100%;
+    z-index: 1;
+    transition: transform 1s ease-in 0.25s;
+    transform: perspective(500px) translateZ(0px);
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    color:#F6F5F3;
+    text-shadow: 3px 3px 5px #020301;
+}
+
+
+.flex-content:hover {
+    transition: transform 1s ease-in 0.25s;
+    transform: perspective(600px) translateZ(30px);
+}
+
+.flex-title, .rooms-flex-title {
+    position: absolute;
+    box-sizing: border-box;
+    color:#F6F5F3;
+    text-shadow: 3px 3px 5px #020301;
+    font-size: 4.5vmin;
+    opacity: 1;
+    bottom: 0;
+    padding: 2vmin;   
+}
+
+.rooms-flex-title {
+    padding: 4.5vmin;  
+    text-shadow: 2px 2px 5px #020301;
+}
+
+.flex-item:hover .flex-title {
+    transition: opacity 0.5s ease-in 0.25s;
+    opacity: 0;
+}
+
+.flex-details {
+    transition: opacity 0.5s ease-in;
+    opacity: 0;
+}
+
+.flex-item:hover .flex-details {
+    transition: opacity 0.5s ease-in 0.25s;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    color:#F6F5F3;
+    text-shadow: 3px 3px 5px #020301;
+}
+
+.details-title, .details-description  {
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    justify-content: center;
+    content: '';
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    width: 100%;
+    padding: 4.5vmin;
+    transition: opacity 0.5s ease-in;
+    opacity: 0;
+}
+
+.details-title::after {
+    display: block;
+    width: 10vmax;
+    height: 2.5px;
+    content: '';
+    background: #A0D176;
+    margin: 2.5vmin auto;
+}
+
+.flex-item:hover .details-title {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10vmin 2vmin 5vmin 2vmin;
+    font-size: 4vmin;
+    transition: opacity 1s ease-in 0.25s;
+    opacity: 1;
+    bottom: 0;
+}
+
+.flex-item:hover .details-description {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2vmin;
+    font-size: 3vmin;
+    transition: opacity 1s ease-in 0.25s;
+    opacity: 1;
+    bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .flex-container, .rooms-flex-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .rooms-flex-containter {
+        padding: 1em;
+        clear: none;
+    }
+
+    .flex-item {
+        width: 100vw;
+    }
+    .rooms-flex-item {
+        width: 96vw;
+    }
+
+    .flex-title, .rooms-flex-title {
+        padding: 4.5vmin 4.5vmin 1.5em;
+        
+    }
+
+    .flex-item:hover .flex-details {
+        font-size: 50%;
+    }
+}
+
+/*---------- END flexbox CSS--------*/
+
+
+
+/*-------rooms paper details CSS-------*/
+
+.rooms-details {
+    padding: 2em;
+    height: 100%;
+    clear: all;
+}
+
+.rooms-content-title, .rooms-details-title { 
+    color:#F6F5F3;
+    text-shadow: 3px 3px 5px #020301;
+    text-align: center;
+    font-size: 1.7em;
+    cursor: pointer;
+    padding-bottom: 1em;
+}
+
+.rooms-details-title-top { 
+    font-size: 1.5em;
+    color:#F6F5F3;
+    text-shadow: 3px 3px 5px #020301;
+    padding-bottom: 10px;
+}
+
+.rooms-details-description-top { 
+    font-size: 1.2em;
+    color:#020301;
+    text-shadow: 1px 1px 5px #F6F5F3;
+    padding-bottom: 25px;
+}
+
+.rooms-details-title-bottom { 
+    font-size: 1.5em;
+    color:#F6F5F3;
+    text-shadow: 3px 3px 5px #020301;
+    padding-bottom: 10px;
+}
+
+.rooms-details-description-bottom { 
+    font-size: 1.2em;
+    color:#020301;
+    text-shadow: 1px 1px 5px #F6F5F3; 
+    padding-bottom: 25px;
+}
+
+
+/*---------- END rooms paper details  CSS--------*/
+
+
+/*---------- AMP Design CSS--------*/
+
+.wall-header-img {
+    position: absolute;
+    background-image: url(images/Paludarium-wall.png);
+    background-position: contain;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.about {  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: fixed;
+    top: 25vh;
+    left: 5vw;  
+    z-index: 0;
+}
+
+.about-team {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 0 1 60vw;
+    position: relative;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px;  
+}
+
+#about-title {
+    display: flex;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 5em;
+    color:#F6F5F3;
+    text-shadow: 3px 3px 5px #020301;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px;  
+    z-index: 1;
+}
+
+#about-team-title {
+    display: relative;
+    flex-wrap: nowrap;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 3.5em;
+    color: #A0D176;
+    text-shadow: 2px 2px 5px #020301;
+    text-align: left;
+    padding-bottom: 0.2em;
+    z-index: 1;
+}
+
+.about-team p {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 1.25em;
+    color:#F6F5F3;
+    text-shadow: 2px 2px 5px #020301;
+    text-align: left;
+    padding: 0 0 0.75em 0;
+    z-index: 1;
+}
+
+.about-team a {
+    font-family: 'Proza Libre', sans-serif;
+    font-style: italic;
+    font-size: 1em;
+    color: #A0D176;
+    text-shadow: 1px 1px 5px #020301;
+    text-decoration: none;
+    text-align: left;
+}
+
+
+
+/*---------- End AMP Design CSS--------*/
+
+
+.footer-banner  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    background-color: #020301;
+}
+
+a.footer-banner-btn, h3.footer-banner-txt {
+    text-align: center;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    color:  #202B10;
+    text-shadow: 0.5px 0.5px 2.5px #A0D176;
+    padding: 15px;
+}
+
+a.footer-banner-btn {
+    border: none;  
+}
+
+a.footer-banner-btn:hover {
+    color: #020301;
+    background-color: #A0D176;
+    border: none;
+    text-decoration: none;
+    padding: none;
+    margin: 0.5rem 0.5rem;
+}
+
+/*-------END footer CSS----------*/
